@@ -475,7 +475,7 @@ export default {
       //get contract transactions
       let txs = await axios.post(
         "https://VashistHackathon.mufazil.repl.co/getContract",
-        { id: 1 }
+        { id: 2 }
       );
       txs = txs.data.contractTxn;
       const contractABI = smart_contract.abi;
@@ -560,7 +560,7 @@ export default {
         .on("transactionHash", function (transactionHash) {
           console.log("Transaction Hash:", transactionHash);
           axios.post("https://VashistHackathon.mufazil.repl.co/addContract", {
-            id: 1,
+            id: 2,
             transaction: transactionHash,
           });
           alert("Please wait a while.");
